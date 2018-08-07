@@ -876,55 +876,6 @@ html,body
 .nav_custom{
 	background-color: #2D3047 !important;
 }
-/*.logobrand{
-
-	width: 220px !important;
-
-}
-
-.navbar-nav{
-
-	width: 1100px !important;
-}
-.navbar-nav>li {
-    float: left;
-    width: 220px !important;
-    border-right: 1px solid #d3d3d345;
-}
-.navbar-nav>li>a{
-
-	padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center !important;
-}
-}*/
-@media screen and (min-width: 1200px){
-
-    .navbar-nav {
-    float: left;
-    margin: 0;
-    width: 1000px !important;
-	}
-
-	.navbar-nav>li {
-    float: left;
-    width: 200px !important;
-    text-align: center !important;
-}
-@media screen and (min-width: 768px){
-
-    .navbar-nav {
-    float: left;
-    margin: 0;
-    width: 1100px !important;
-	}
-
-	.navbar-nav>li {
-    float: left;
-    width: 183.33333px !important;
-    text-align: center !important;
-	}
-}
 .maincont
 {
 	margin-left: 50px !important;
@@ -976,4 +927,91 @@ html,body
 	font-size: 13px;
 	letter-spacing:2px;
 
+}
+/*#########################################################Grid Style*/
+.midcontent{
+	padding: 20px;
+	box-shadow: 1px 1px 1px 1px #ddd;
+	max-height: 465px;
+	overflow-y:scroll;
+
+}
+.searvicecont
+{
+	padding: 20px;
+	border:1px solid #ddd;
+	height: 25%;
+	padding-top: 30px;
+	box-sizing: border-box;
+	text-align: center;
+	box-shadow: 1px 1px 1px 1px #ccc;
+}
+.service
+{
+	margin-top: 5px;
+}
+.servicecol
+{
+	box-shadow: 1px 1px 1px 1px #ddd;
+	//margin:1px;
+    padding: 10px 5px;
+}
+::-webkit-scrollbar {
+    width: 20px;
+		height: 20px;
+}
+
+/* Track */
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+/*Responsive CSS*/
+@media screen and (max-width: 480px){
+
+	.midcontent{
+
+		max-height: none;
+		overflow-y: unset;
+	}
+}
+@media screen and (min-width: 1200px){
+
+    .navbar-nav {
+    float: left;
+    margin: 0;
+    width: 690px !important;
+	}
+
+	.navbar-nav>li {
+    float: left;
+    width: 115px !important;
+    text-align: center !important;
+	}
+}
+
+@media only screen and (min-width: 1366px){
+
+    .navbar-nav {
+    float: left;
+    margin: 0;
+    width: 840px !important;
+	}
+	.navbar-nav>li {
+    float: left;
+    width: 140px !important;
+    text-align: center !important;
+	}
 }
