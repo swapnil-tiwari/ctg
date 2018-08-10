@@ -946,6 +946,9 @@ html,body
 	text-align: center;
 	box-shadow: 1px 1px 1px 1px #ccc;
 }
+.ficons{
+	font-size: 80px !important;
+}
 .service
 {
 	margin-top: 5px;
