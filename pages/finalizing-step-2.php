@@ -37,7 +37,11 @@
 		</div>
 
 		<div class="col-sm-9">
-			
+			<div class="content">
+				<label>FULL NAME</label>
+				<input type="input" name="firstname" placeholder="First name">
+				<input type="input" name="secondname" placeholder="Second name">
+			</div>
 		</div>
 		
 	</div>	

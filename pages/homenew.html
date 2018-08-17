@@ -29,29 +29,9 @@
       line-height: 0.357 !important;
     }
     </style>
+
   </head>
 <body>
-	<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId            : '532698697146700',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v2.12'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<div class="fb-customerchat" page_id="474418903021671"></div>
-    
   <div class="row header">
     <div class="col-sm-6">
         <img src="../images/logo.png" class="logos"><h2 class="brandname">Connect To Grow</h2>
@@ -113,21 +93,21 @@
 			<div class="midcontent">
 				<div class="row service cont1">
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="Development" onclick="myFunction(this)">
                 <i class="fa fa-laptop ficons"></i>
 								<br><br><p>Development</p>
 
 							</div>
 						</div>
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="Branding" onclick="myFunction(this)">
                 <i class="fa fa-paint-brush ficons"></i>
 								<br><br><p>Branding & Designing</p>
 
 							</div>
 						</div>
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont"  id="Digital" onclick="myFunction(this)">
                 <i class="fa fa-line-chart ficons"></i>
 								<br><br><p>SEO & Digital Marketing</p>
 
@@ -137,20 +117,20 @@
 				</div>
 				<div class="row service cont2">
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="Legal" onclick="myFunction(this)">
                 <i class="fa fa-gavel ficons"></i>
 								<br><br><p>Legal Services</p>
 							</div>
 						</div>
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="Email" onclick="myFunction(this)">
                 <i class="fa fa-envelope ficons"></i>
 								<br><br><p>Email & Chat Services</p>
 
 							</div>
 						</div>
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="sms" onclick="myFunction(this)">
                 <i class="fa fa-mobile-alt ficons"></i>
 								<br><br><p>SMS APIs</p>
 
@@ -160,21 +140,21 @@
 				</div>
 				<div class="row service cont3">
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="event" onclick="myFunction(this)">
                 <i class="fa fa-calendar-alt ficons"></i>
 								<br><br><p>Event Management</p>
 
 							</div>
 						</div>
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="Mentorship" onclick="myFunction(this)">
                 <i class="fa fa-user ficons"></i>
 								<br><br><p>Mentorship</p>
 
 							</div>
 						</div>
 						<div class="col-sm-4 servicecol">
-							<div class="searvicecont">
+							<div class="searvicecont" id="Advertisement" onclick="myFunction(this)">
                 <i class="fa fa-bullhorn ficons"></i>
 								<br><br><p>Advertisement</p>
 								
@@ -183,6 +163,10 @@
 
 				</div>
 			</div>
+      <!---   div after service click function   -->
+            <div class="serviceafter" id="dev-target"></div>
+
+      <!--  End  div -->
 		</div>
 		<div class="col-sm-2">
 			<div class="services_suggestions">
@@ -212,3 +196,21 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Passion+One|Prompt" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+   <script type="text/javascript">
+      function myFunction(val){
+          var id="#"+val.id;
+          document.querySelector(id).parentNode.parentNode.parentNode.style.display="none";
+          var node = document.querySelector("#"+val.id).childNodes[5];
+          var html = node.innerHTML;
+          document.getElementById("dev-target").style.display="block";
+          document.getElementById("dev-target").innerHTML='<center><h2>'+ html +'</h2></center><div id="contain"><center><button class="btn btn-primary goback" type="button" onclick="back(this)" id="return">Go Back</button>&nbsp;<button class="btn btn-primary apply" type="submit" name="submit">Apply</button></center></div>';
+
+
+          }
+          function back(element){
+           document.getElementById("dev-target").style.display="none";
+           document.querySelector('.midcontent').style.display="block";
+          }
+    </script>
+</html

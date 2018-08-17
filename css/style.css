@@ -980,7 +980,12 @@ html,body
  ::-webkit-scrollbar-thumb:hover {
     background: #ccc;
 }
-
+/* After Grid*/
+.serviceafter{
+	display: none;
+	padding: 20px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
 /*Responsive CSS*/
 @media screen and (max-width: 480px){
 
@@ -988,6 +993,24 @@ html,body
 
 		max-height: none;
 		overflow-y: unset;
+	}
+	.maincont {
+	    margin-left: 20px !important;
+	    margin-right: 20px !important;
+	}
+	.ficons {
+    	font-size: 60px !important;
+	}
+	.services_suggestions{
+
+		display: none;
+	}
+	.brandname{
+		    font-size: 6vw !important;
+	}
+	.logos{
+
+		width: 10vw !important;
 	}
 }
 @media screen and (min-width: 1200px){
