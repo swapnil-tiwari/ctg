@@ -1,0 +1,42 @@
+.profilecont
+{
+  width: 100%;
+  height: 40%;
+  background: #ccc;
+  padding-top: 84px;
+}
+.proflogo
+{
+  box-shadow: 5px 10px 8px #888888;
+  width: 180px;
+  height:200px;
+  background: #000;
+  margin:auto;
+}
+.profpart2
+{
+  margin-top: 35px;
+  margin-left: unset !important;
+  margin-right: unset !important;
+}
+.infoparent
+{
+  padding:10px;
+
+}
+.activityparent
+{
+  padding:10px;
+}
+.infocont
+{
+  padding:5px;
+  background: #fff;
+
+}
+.activitycont
+{
+  padding:5px;
+  background: #fff;
+
+}
