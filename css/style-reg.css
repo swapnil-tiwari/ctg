@@ -68,7 +68,7 @@ body
     border-radius: 5px;
 }
 .languages{
-	width: 98%;
+  	width: 98%;
     padding: 5px;
     text-indent: 8;
     border: 1px solid #ccc;
@@ -90,4 +90,14 @@ body
 	text-indent: 8 ;
 	border-radius: 5px;
 	resize: none;
+}
+.cnumber
+{
+	position: relative;
+}
+.logo
+{
+	float: none !important;
+	margin-right: auto;
+	margin-left: auto;
 }
