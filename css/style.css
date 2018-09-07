@@ -966,6 +966,20 @@ html,body
 	padding: 20px;
     box-shadow: 1px 1px 1px 1px #ccc;
 }
+/*Dashboard Links*/
+.menu a:visited
+{
+	color: #fff;
+}
+.menu a:hover
+{
+	text-decoration: none;
+}
+/*Timeline headings*/
+.requests h1
+{
+	font-size: 20px;
+}
 /*Responsive CSS*/
 @media screen and (max-width: 480px){
 

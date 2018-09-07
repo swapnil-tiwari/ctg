@@ -57,7 +57,7 @@
     </div>
 		 <div class="collapse navbar-collapse" id="myNavbar">
 		    <ul class="nav navbar-nav">
-		      <li class="active"><a href="#">Home</a></li>
+		      <li class="active"><a href="./homenew.html">Home</a></li>
 		      <li><a href="#">About Us</a></li>
 					<li><a href="#">Our Services</a></li>
 					<li><a href="#">Our Clients</a></li>
@@ -79,8 +79,8 @@
 			<div class="profiledata">
 				<h2>Startup Name</h2>
 				<ul class="menu">
-					<li>Dashboard</li>
-					<li>Profile</li>
+					<a href="./homenew.html"><li>Dashboard</li></a>
+					<a href="./profile.html"><li>Profile</li></a>
 					<li>Orders</li>
 					<li>Billing</li>
 					<li>Team Area</li>
@@ -164,7 +164,7 @@
 				</div>
 			</div>
       <!---   div after service click function   -->
-            <div class="serviceafter" id="dev-target"></div>
+            <div class="serviceafter" id="dev-target"  style="max-height:465px;overflow-y:scroll;"></div>
 
       <!--  End  div -->
 		</div>
@@ -212,12 +212,13 @@
 
    <script type="text/javascript">
       function myFunction(val){
+				var posts= '<div class="timeline"><div class="requests"><h1>Requirements by the other startup..</h1><h5>By Startup Name</h5><hr><p>We need 20 State franchisees across India for IIM Calcutta certified Healthcare business. Is there any company or consultancy company who can appoint or select franchise on our behalf on long term commission basis (minimum 5 years). Monthly return not less than 5-7 lakhs. WhatsApp on 9874290556 or mail us subirghosh.ohc@gmail.com<br><p class="budget-display">5000</p></p><hr><button class="flag"><i class="fa fa-map-marker" aria-hidden="true"></i>Request</button><button class="money"><i class="fa fa-money" aria-hidden="true"></i>Apply</button><hr style="border: 2px solid #DBDBDB"></div></div>'
           var id="#"+val.id;
           document.querySelector(id).parentNode.parentNode.parentNode.style.display="none";
           var node = document.querySelector("#"+val.id).childNodes[5];
           var html = node.innerHTML;
           document.getElementById("dev-target").style.display="block";
-          document.getElementById("dev-target").innerHTML='<center><h2>'+ html +'</h2></center><div id="contain"><center><button class="btn btn-primary goback" type="button" onclick="back(this)" id="return">Go Back</button>&nbsp;<button class="btn btn-primary apply" type="submit" name="submit">Apply</button></center></div>';
+          document.getElementById("dev-target").innerHTML='<center><h2>'+ html +'</h2></center> '+posts+posts+'<div id="contain"><center><button class="btn btn-primary goback" type="button" onclick="back(this)" id="return">Go Back</button>&nbsp;</center></div>';
 
 
           }
