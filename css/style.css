@@ -971,9 +971,14 @@ html,body
 {
 	color: #fff;
 }
+.menu a
+{
+	color:#fff;
+}
 .menu a:hover
 {
 	text-decoration: none;
+	color:#fff;
 }
 /*Timeline headings*/
 .requests h1
