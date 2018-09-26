@@ -119,15 +119,24 @@ document.write(JSON.stringify(res))
         }
     async function logout()
     {
-        var res=await fetch('http://localhost:8080/data/logout',
+        window.api?null:window.api=await setAPI();
+        var response=await api.logout();
+        if(response.code==200)
         {
-            method:'get',
-            headers:{
-                'content-type':'application/json'
-            }
-        })
+          window.location.href = "../pages/getting-started.html";
+        }
+        else {
+          console.log("Some Error");
+        }
+        // var res=await fetch('http://localhost:8080/data/logout',
+        // {
+        //     method:'get',
+        //     headers:{
+        //         'content-type':'application/json'
+        //     }
+        // })
         //resp.value=JSON.stringify(await res.json())
-        window.location.href = "../pages/getting-started.html";
+
     }
     async function islogin()
     {
