@@ -37,19 +37,19 @@
 					<div class="item animated slideInRight" style="height: 100%;">
 						<h1>Signup As A FreeLancer</h1>
 						<form method="POST" action="">
-							<input type="text" name="name" class="txt-sml-2" placeholder="Name" required id="username">
+							<input type="text" name="name" class="txt-sml-2" placeholder="Name" required id="username_f">
 							<br>
-							<input type="text" name="email" class="txt-sml-2" placeholder="Email" required id="email">
+							<input type="text" name="email" class="txt-sml-2" placeholder="Email" required id="email_f">
 							<br>
-							<input type="password" name="pass" class="txt-sml-2" placeholder="Password" required id="pass">
+							<input type="password" name="pass" class="txt-sml-2" placeholder="Password" required id="pass_f">
 							<br>
-							<input type="text" name="contact_no" class="txt-sml-2" placeholder="Contact Number" required id="contactno">
+							<input type="text" name="contact_no" class="txt-sml-2" placeholder="Contact Number" required id="contactno_f">
 							<br>
 							<p style="padding-right: 50px; padding-left: 50px;">
 								<input type="checkbox" name="terms" required> I aaccept the <a href="terms_and_conditions.pdf" style="color:#1E90FF">Terms and Conditions</a> Of the Connect To Grow.
 								And all my details filled up are correct.
 							</p>
-							<button class="btn-sml-2" type="button" name="signup" onclick="register()">SignUp</button>
+							<button class="btn-sml-2" type="button" name="signup" onclick="register_f()">SignUp</button>
 						</form>
 
 						<div class="hidden" id="message">Success Message</div>
@@ -60,19 +60,19 @@
 					<div class="item">
 						<h1>Signup As A Startups</h1>
 						<form method="POST" action="">
-							<input type="text" name="name" class="txt-sml-2" placeholder="Startup Name" required>
+							<input type="text" name="name" class="txt-sml-2" placeholder="Startup Name" required id="username_sp">
 							<br>
-							<input type="text" name="email" class="txt-sml-2" placeholder="Startup Email" required>
+							<input type="text" name="email" class="txt-sml-2" placeholder="Startup Email" required id="email_sp">
 							<br>
-							<input type="password" name="password" class="txt-sml-2" placeholder="Password" required>
+							<input type="password" name="password" class="txt-sml-2" placeholder="Password" required  id="pass_sp">
 							<br>
-							<input type="text" name="contact_no" class="txt-sml-2" placeholder="Contact Number" required>
+							<input type="text" name="contact_no" class="txt-sml-2" placeholder="Contact Number" required id="contactno_sp">
 							<br>
 							<p style="padding-right: 50px; padding-left: 50px;">
 								<input type="checkbox" name="terms" required> I aaccept the <a href="terms_and_conditions.pdf" style="color:#1E90FF">Terms and Conditions</a> Of the Connect To Grow.
 								And all my details filled up are correct.
 							</p>
-							<button type="submit" class="btn-sml-2" onlclick='register()'>
+							<button type="button" class="btn-sml-2" onclick='register_sp()'>
                             	SignUp
                         	</button>
 						</form>
@@ -123,5 +123,6 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
   <script type="text/javascript" src="../js/backend.js"></script>
+	<script type="text/javascript" src="../js/api.rpc.js"></script>
 
 </html>

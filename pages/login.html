@@ -1,3 +1,4 @@
+
 <html>
 <head>
 	<title>Connect To Grow</title>
@@ -15,6 +16,16 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
+		<script type="text/javascript" src="../js/backend.js"></script>
+		<script type="text/javascript" src="../js/api.rpc.js"></script>
+		<script>
+		async function apihandler(api)
+		{
+				if((await api.islogin()).data.login==true)
+					window.location.href = "./homenew.html";
+		}
+		setAPI(apihandler);
+		</script>
 </head>
 <body>
     <div class="row login">
@@ -61,6 +72,5 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Passion+One|Prompt" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-		<script type="text/javascript" src="../js/backend.js"></script>
 
 </html>
