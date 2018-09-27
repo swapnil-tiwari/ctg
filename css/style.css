@@ -859,16 +859,27 @@ html,body
 /*New CSS Home*/
 .logo
 {
-	max-width: 50px;
+	max-width: 40px;
 	height: auto;
 
 }
 .header
 {
-	padding:2%;
-	margin-left: 50px !important;
-	margin-right: 50px !important;
+	border:0px !important;
+	border-bottom: 1px solid #e4d8d8 !important;
+	border-radius:0px !important;
 
+	background: #fff !important;
+	color: #000 !important;
+	margin-bottom: 0px !important;
+
+	/* padding:2%;
+	margin-left: 50px !important;
+	margin-right: 50px !important; */
+
+}
+#collapseconsole{
+	display: none;
 }
 .search-container {
   float: right;
@@ -878,8 +889,8 @@ html,body
 }
 .maincont
 {
-	margin-left: 20px !important;
-	margin-right:20px !important;
+	/* margin-left: 20px !important;
+	margin-right:20px !important; */
 
 }
 .profiledata
@@ -932,8 +943,9 @@ html,body
 .midcontent{
 	padding: 20px;
 	box-shadow: 1px 1px 1px 1px #ddd;
-	max-height: 465px;
-	overflow-y:scroll;
+	max-height: 100%;
+	/* overflow-y:scroll; */
+
 
 }
 .searvicecont
@@ -1005,16 +1017,32 @@ html,body
 		display: none;
 	}
 	.brandname{
-		    font-size: 6vw !important;
+		   /* font-size: 6vw !important; */
 	}
 	.logos{
+		margin-right:
 
-		width: 10vw !important;
+		/* width: 10vw !important; */
+	}
+	#collapseconsole{
+		display: block;
+	}
+	#mainconsole
+	{
+		display: none;
+	}
+	#navlogout
+	{
+		display: none;
+	}
+	.navbar-brand
+	{
+		margin-left: 50px;
 	}
 }
 @media screen and (min-width: 1200px){
 
-    .navbar-nav {
+    /* .navbar-nav {
     float: left;
     margin: 0;
     width: 690px !important;
@@ -1024,12 +1052,12 @@ html,body
     float: left;
     width: 115px !important;
     text-align: center !important;
-	}
+	} */
 }
 
 @media only screen and (min-width: 1366px){
 
-    .navbar-nav {
+    /* .navbar-nav {
     float: left;
     margin: 0;
     width: 840px !important;
@@ -1038,5 +1066,5 @@ html,body
     float: left;
     width: 140px !important;
     text-align: center !important;
-	}
+	} */
 }

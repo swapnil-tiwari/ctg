@@ -19,6 +19,17 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon.png">
 		<script type="text/javascript" src="../js/backend.js"></script>
 		<script type="text/javascript" src="../js/api.rpc.js"></script>
+		<script type="text/javascript" src="../js/backend.js"></script>
+		<script type="text/javascript" src="../js/api.rpc.js"></script>
+		<script type="text/javascript" src="../js/fetchClient.js"></script>
+		<script>
+		async function apihandler(api)
+		{
+				if((await api.islogin()).data.login==false)
+					window.location.href = "./login.html";
+		}
+		setAPI(apihandler);
+		</script>
     <style type="text/css">
 
       .logos{
@@ -35,7 +46,7 @@
 
   </head>
 <body>
-  <div class="row header">
+  <!-- <div class="row header">
     <div class="col-sm-6">
         <img src="../images/logo.png" class="logos"><h2 class="brandname">Connect To Grow</h2>
     </div>
@@ -68,23 +79,54 @@
 					<li><a href="#">Contact Us</a></li>
 		    </ul>
 		<button type="button" class="btn btn-default navbar-left" style="margin-left:30px;margin-top:8px;" onclick="logout();">Logout</button>
-    <!-- <form class="navbar-form navbar-left" action="/action_page.php">
+     <form class="navbar-form navbar-left" action="/action_page.php">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
-    </form> -->
+    </form>
 	</div>
   </div>
-</nav>
-	<div class="row maincont">
-		<div class="col-sm-3 profile">
-			<div class="profiledata">
-				<h2>Startup Name</h2>
+</nav> -->
+<nav class="navbar navbar-inverse header" >
+<div class="container-fluid">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar" style="background:#000;"></span>
+			<span class="icon-bar"style="background:#000;"></span>
+			<span class="icon-bar"style="background:#000;"></span>
+		</button>
+		<img src="../images/logo.png" class="logos">
+		<a class="navbar-brand" href="#" style="color:#000;">Connect To Grow</a>
+	</div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+			<div class="profiledata" id="collapseconsole" style="margin-left:-15px;margin-right:-15px;">
+				<h2 id="startup_cap_dash_1">Startup Name</h2>
 				<ul class="menu">
 					<a href="./homenew.html"><li>Dashboard</li></a>
 					<a href="./profile.html"><li>Profile</li></a>
 					<li>Orders</li>
+					<li>Billing</li>
+					<li>Support</li>
+					<li>Inbox</li>
+					<li>Logout</li>
+				</ul>
+			</div>
+
+		<ul class="nav navbar-nav navbar-right" id="navlogout">
+			<li><a href="#" style="color:#000;" onclick="logout();"><span class="glyphicon glyphicon-log-in" style="color: #000;"></span> Logout</a></li>
+		</ul>
+	</div>
+</div>
+</nav>
+	<div class="row maincont">
+		<div class="col-sm-2 profile">
+			<div class="profiledata" id="mainconsole">
+				<h2 id="startup_cap_dash_2">Startup Name</h2>
+				<ul class="menu" style="margin-bottom:175px;">
+					<a href="./homenew.html"><li>Dashboard</li></a>
+					<a href="./profile.html"><li>Profile</li></a>
+					<a href="./orders.html"><li>Orders</li></a>
 					<li>Billing</li>
 					<li>Team Area</li>
 					<li>Support</li>
@@ -92,8 +134,8 @@
 				</ul>
 			</div>
 		</div>
-		<div class="col-sm-9">
-      <div class="midcontent" style="background:#e9ebee;">
+		<div class="col-sm-10">
+      <div class="midcontent" style="background:#e9ebee; overflow-y:scroll;max-height:595px;">
         <div class="profilecont img">
           <div class="proflogo">
 						<img src="../images/logo.png" style="width:100%;height:auto;margin:auto;">
