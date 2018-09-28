@@ -13,28 +13,39 @@
     <link rel="manifest" href="manifest.json">
 
     <link rel="stylesheet" type="text/css" href="../css/style-reg.css">
+		<link rel="icon" type="image/png" sizes="96x96" href="../images/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+		<script type="text/javascript" src="../js/backend.js"></script>
+		<script type="text/javascript" src="../js/api.rpc.js"></script>
+		<script type="text/javascript" src="../js/fetchClient.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/animate.css">
+		<script>
+			async function apihandler(api)
+			{
+					if((await api.islogin()).data.login==false)
+						window.location.href = "./login.html";
+			}
+			setAPI(apihandler);
+			</script>
 </head>
+
 <body>
 
 	<div class="row reg">
 
 		<div class="col-sm-3">
 			<div class="header">
-				<h3>Finalizing Registration</h3>
-				<div class="logo">
-					<img src="../images/logo.png" height="40px">
-				</div>
+				<center><h3>Finalizing Registration</h3></center>
+				<center><h3 id="startup_cap_dash_1">Username</h3></center>
 			</div>
 
 			<ul>
-				<li>Complete Registration</li>
+			   <li>Complete Registration</li>
 				<li>Setup Profile</li>
-				<li>Setup Business Details</li>
-				<li>Setup Team</li>
 			</ul>
+			<center><button class="btn-sml-2" type="button" name="Finish" onclick="">Finish</button></center>
 		</div>
+
 
 		<div class="col-sm-9" style="background-color: #80808012">
 			<div class="content">

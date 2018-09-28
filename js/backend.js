@@ -44,7 +44,7 @@ document.write(JSON.stringify(res))
         }
         async function login()
         {
-            window.api?null:window.api=await init();
+            window.api?null:window.api=await setAPI();
             //await api.login{username:username.value,password:password.value};
           //   var res=await fetch('http://localhost:8080/data/login',
           //   {
@@ -59,7 +59,30 @@ document.write(JSON.stringify(res))
             var response=await api.login({username:username.value,password:password.value});
             if (response.data.login==true)
             {
-              window.location.href = "../pages/homenew.html";
+              if(location.hash=="#freelancer")
+              {
+                await api["register/update"]({type:'freelancer'});
+
+              }
+              if(location.hash=="#startup")
+              {
+                await api["register/update"]({type:'startup'});
+
+              }
+              var usertype=(await api.userdata(['type'])).data.type;
+              if(usertype=="freelancer")//register status
+              {
+                window.location.href = "../pages/finalizing-step-2.html";
+              }
+              else if(usertype=="startup")//register status
+              {
+                window.location.href = "../pages/finalizing-step-2-startups.html";
+              }
+              else {
+                window.location.href = "../pages/homenew.html";
+              }
+
+
 
             }
             else {
@@ -69,6 +92,7 @@ document.write(JSON.stringify(res))
         }
         async function register_f()
         {
+            var hash=window.location.hash="freelancer";
             window.api?null:window.api=await setAPI();
             // var res=await fetch('http://localhost:8080/data/register',
             // {
@@ -81,7 +105,7 @@ document.write(JSON.stringify(res))
             var response=await api.register({username:username_f.value,password:pass_f.value,email:email_f.value,contact:contactno_f.value});
             if(response.code==200)
             {
-               window.location.href = "../pages/login.html";
+               window.location.href = "../pages/login.html#"+hash;
             }
             else {
                window.location.href = "../pages/getting-started.html";
@@ -94,7 +118,8 @@ document.write(JSON.stringify(res))
         }
         async function register_sp()
         {
-            window.api?null:window.api=await init();
+          var hash=window.location.hash="startup";
+            window.api?null:window.api=await setAPI();
             // var res=await fetch('http://localhost:8080/data/register',
             // {
             //     method:'post',
@@ -106,7 +131,7 @@ document.write(JSON.stringify(res))
             var response=await api.register({username:username_sp.value,password:pass_sp.value,email:email_sp.value,contact:contactno_sp.value});
             if(response.code==200)
             {
-               window.location.href = "../pages/login.html";
+               window.location.href = "../pages/login.html#"+hash;
             }
             else {
                window.location.href = "../pages/getting-started.html";
@@ -138,14 +163,17 @@ document.write(JSON.stringify(res))
         //resp.value=JSON.stringify(await res.json())
 
     }
-    async function islogin()
-    {
-        var res=await fetch('/data/islogin',
-        {
-            method:'get',
-            headers:{
-                'content-type':'application/json'
-            }
-        })
-        resp.value=JSON.stringify(await res.json())
-    }
+    // async function islogin()
+    // {
+    //     var res=await fetch('/data/islogin',
+    //     {
+    //         method:'get',
+    //         headers:{
+    //             'content-type':'application/json'
+    //         }
+    //     })
+    //     resp.value=JSON.stringify(await res.json())
+    // }
+
+
+    // Complete Registration Process Backend Functions
