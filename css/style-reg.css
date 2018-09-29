@@ -5,7 +5,9 @@ body
 }
 .reg
 {
-	height: 100%;
+	height: 655px;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
 }
 .reg .col-sm-3
 {
@@ -46,6 +48,12 @@ body
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
+.reg .col-sm-9
+{
+	  height: 631px;
+    overflow-y: scroll;
+
+}
 .reg .col-sm-3 ul li
 {
 	color: white;
@@ -81,6 +89,7 @@ body
 }
 .main-cont{
 	padding: 20px;
+	height: 150px;
 	box-shadow: 1px 1px 1px 1px #ccc;
 }
 .description{
@@ -110,4 +119,48 @@ body
     font-weight: bolder;
     margin-top: 30px;
     border-radius: 2px;
+}
+.main-cont:before,.main-cont:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+}
+.main-cont:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.main-cont:hover:before,.main-cont:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+.leftpanel{
+	height: 100% !important;
+}
+@media screen and (max-width: 480px){
+
+	.reg
+	{
+		height: 100%;
+	}
+	.leftpanel{
+		height: 450px !important;
+	}
+
+	.reg .col-sm-3 ul
+	{
+		padding-bottom: 0px;
+	}
+	.reg .col-sm-9
+	{
+		  height: 100%;
+	    overflow-y: unset;
+
+	}
 }

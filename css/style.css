@@ -889,6 +889,7 @@ html,body
 }
 .maincont
 {
+	margin-right: 0px !important;
 	/* margin-left: 20px !important;
 	margin-right:20px !important; */
 
@@ -970,6 +971,26 @@ html,body
 	box-shadow: 1px 1px 1px 1px #ddd;
 	//margin:1px;
     padding: 10px 5px;
+}
+.searvicecont:before,.searvicecont:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: black;
+  transition:400ms ease all;
+}
+.searvicecont:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.searvicecont:hover:before,.searvicecont:hover:after{
+  width:100%;
+  transition:800ms ease all;
 }
 
 /* After Grid*/

@@ -31,7 +31,7 @@
 
 	<div class="row reg">
 
-		<div class="col-sm-3">
+		<div class="col-sm-3 leftpanel">
 			<div class="header">
 				<center><h3>Finalizing Registration</h3></center>
 				<center><h3 id="startup_cap_dash_1">Username</h3></center>
@@ -41,18 +41,19 @@
 			   <li>Complete Registration</li>
 				<li>Setup Profile</li>
 			</ul>
-			<center><button class="btn-sml-2" type="button" name="Finish" onclick="">Finish</button></center>
+			<center><button class="btn-sml-2" type="button" name="Finish" onclick="updateData_f();">Finish</button>
+				&nbsp;&nbsp; <button class="btn-sml-2" type="button" name="Logout" onclick="logout();">Logout</button></center>
 		</div>
 
 		<div class="col-sm-9" style="background-color: #80808012">
 			<div class="content">
 				<label>FULL NAME</label><br>
-				<input type="input" name="firstname" placeholder="First" class="name">
-				<input type="input" name="secondname" placeholder="Second" class="name">
+				<input type="input" name="firstname" placeholder="Full Name" class="name" id="fname">
+
 				<br><br>
 				<label>LANGUAGES</label><br>
 				<h5>Tell us the languages you speak so that we can give you relevant jobs.</h5>
-				<select data-placeholder="Choose a Language..." class="languages">
+				<select data-placeholder="Choose a Language..." class="languages" id="comlanguage">
 					  <option value="Afrikanns">Afrikanns</option>
 					  <option value="Albanian">Albanian</option>
 					  <option value="Arabic">Arabic</option>
@@ -131,23 +132,23 @@
 				<br>
 				<h5>How would you rate your experience?</h5>
 				<div class="row">
-					<div class="col-sm-4 grid-style">
-						<div class="main-cont">
+					<div class="col-sm-4 grid-style begparent">
+						<div class="main-cont beg">
 							<center><label>BEGINNER</label></center>
 							<hr>
 							<h6>You have been working with these skills for less than a year and still learning.</h6>
 						</div>
 
 					</div>
-					<div class="col-sm-4 grid-style">
-						<div class="main-cont">
+					<div class="col-sm-4 grid-style modparent">
+						<div class="main-cont mod">
 							<center><label>INTERMEDIATE</label></center>
 							<hr>
 							<h6>You have been working with these skills for 2 to 5 years and can complete most of the common tasks.</h6>
 						</div>
 					</div>
-					<div class="col-sm-4 grid-style">
-						<div class="main-cont">
+					<div class="col-sm-4 grid-style advparent">
+						<div class="main-cont adv">
 							<center><label>ADVANCED</label></center>
 							<hr>
 							<h6>You have been working with these skills for more than five years and you are expert in them.</h6>
@@ -158,12 +159,12 @@
 				<br><br>
 				<label>DESCRIPTION</label><br>
 				<h5>A short desrcition about your skills and work.</h5>
-				<textarea class="description" placeholder="Write here..."></textarea>
+				<textarea class="description" placeholder="Write here..." id="description"></textarea>
 
 				<br><br>
 				<label>WORK</label><br>
 				<h5>Provide us the link of your github profile (recommended) or any other work.</h5>
-				<textarea class="description" placeholder="Write here..."></textarea>
+				<textarea class="description" placeholder="Write here..." id="work"></textarea>
 
 			</div>
 				<!-- End of div content  -->
@@ -190,5 +191,46 @@
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<script>
+		var skill;
+		$(document).ready(function(){
+						$(".beg").click(function(){
+							skill="BEGINNER";
+							$(".beg").css("border","4px solid #46b148");
+							$(".mod").css("border","0px");
+							$(".adv").css("border","0px");
+						});
+						$(".mod").click(function(){
+							skill="INTERMEDIATE";
+							$(".mod").css("border","4px solid #46b148");
+							$(".beg").css("border","0px");
+							$(".adv").css("border","0px");
+						});
+						$(".adv").click(function(){
+							skill="ADVANCED";
+							$(".adv").css("border","4px solid #46b148");
+							$(".mod").css("border","0px");
+							$(".beg").css("border","0px");
+						});
+						// $(".beg").mouseover(function(){
+						// 	$(this).css("border","4px solid #337ab7");
+						// });
+						// $(".beg").mouseout(function(){
+						// 	$(this).css("border","0px");
+						// });
+						// $(".mod").mouseover(function(){
+						// 	$(this).css("border","4px solid #337ab7");
+						// });
+						// $(".mod").mouseout(function(){
+						// 	$(this).css("border","0px");
+						// });
+						// $(".adv").mouseover(function(){
+						// 	$(this).css("border","4px solid #337ab7");
+						// });
+						// $(".adv").mouseout(function(){
+						// 	$(this).css("border","0px");
+						// });
+				});
+		</script>
 
 </html>

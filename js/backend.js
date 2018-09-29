@@ -56,6 +56,7 @@ document.write(JSON.stringify(res))
           //   })
           // //  console.log(JSON.stringify(await res.json()));
           //   var response= await res.json();
+          try{
             var response=await api.login({username:username.value,password:password.value});
             if (response.data.login==true)
             {
@@ -70,11 +71,12 @@ document.write(JSON.stringify(res))
 
               }
               var usertype=(await api.userdata(['type'])).data.type;
-              if(usertype=="freelancer")//register status
+              var regstatus=(await api.userdata(['registrationstatus'])).data.registrationstatus;
+              if(usertype=="freelancer" && typeof regstatus=="undefined")//register status
               {
                 window.location.href = "../pages/finalizing-step-2.html";
               }
-              else if(usertype=="startup")//register status
+              else if(usertype=="startup" && typeof regstatus=="undefined")//register status
               {
                 window.location.href = "../pages/finalizing-step-2-startups.html";
               }
@@ -85,8 +87,9 @@ document.write(JSON.stringify(res))
 
 
             }
-            else {
-                window.location.href = "../pages/login.html";
+          }
+            catch(e) {
+               window.alert("Wrong Credentials");
             }
 
         }
@@ -148,7 +151,7 @@ document.write(JSON.stringify(res))
         var response=await api.logout();
         if(response.code==200)
         {
-          window.location.href = "../pages/getting-started.html";
+          window.location.href = "../pages/login.html";
         }
         else {
           console.log("Some Error");
@@ -177,3 +180,42 @@ document.write(JSON.stringify(res))
 
 
     // Complete Registration Process Backend Functions
+    async function updateData_f()
+    {
+      window.api?null:window.api=await setAPI();
+      try
+      {
+        var response=await api["register/update"]({communicationlanguage:comlanguage.value,skillslevel:skill,description:description.value,work:work.value,registrationstatus:"completed"});
+        if (response.code==200)
+        {
+           window.location.href = "../pages/homenew.html";
+
+        }
+
+      }
+      catch(e)
+      {
+        window.alert("Fill the form properly");
+
+      }
+
+    }
+    async function updateData_s()
+    {
+      window.api?null:window.api=await setAPI();
+      try
+      {
+        var response=await api["register/update"]({startupname:startupname.value,contact:startupcno.value,country:country.value,description:description.value,currentstatus:currentstatus.value,registrationstatus:"completed"});
+        if (response.code==200)
+        {
+           window.location.href = "../pages/homenew.html";
+
+        }
+
+      }
+      catch(e)
+      {
+        window.alert("Fill the form properly")
+      }
+
+    }
