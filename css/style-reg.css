@@ -5,7 +5,7 @@ body
 }
 .reg
 {
-	height: 655px;
+	/* height: 655px; */
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 }
@@ -50,7 +50,7 @@ body
 }
 .reg .col-sm-9
 {
-	  height: 631px;
+	  height: 100%;
     overflow-y: scroll;
 
 }

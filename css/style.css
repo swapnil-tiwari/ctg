@@ -3,6 +3,7 @@ html,body
 	height: 100%;
 	overflow-x: hidden;
 	font-family: calibri;
+	overflow-y: hidden;
 }
 .bg
 {
@@ -190,7 +191,7 @@ html,body
 }
 .menu li
 {
-	margin-top: 10px;
+	margin-top: 30px;
 	font-size: 13px;
 	word-spacing: 5px;
 	letter-spacing:2px;
@@ -889,10 +890,15 @@ html,body
 }
 .maincont
 {
+	min-height: 100% !important;
 	margin-right: 0px !important;
 	/* margin-left: 20px !important;
 	margin-right:20px !important; */
 
+}
+.profile
+{
+	/* min-height: 100% !important; */
 }
 .profiledata
 {
@@ -900,6 +906,7 @@ html,body
 	box-shadow: 1px 1px 1px 1px #ddd;
 	background: #2D3047;
 	color: white;
+	min-height: 100% !important;
 }
 .profiledata h2
 {
@@ -1018,13 +1025,24 @@ html,body
 {
 	font-size: 20px;
 }
+/* Req Form style */
+.reqformcont
+{
+	box-shadow: 1px 1px 1px 1px #290d0d;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
 /*Responsive CSS*/
 @media screen and (max-width: 480px){
 
+	body{
+		overflow-y: unset !important;
+	}
 	.midcontent{
 
 		max-height: none;
-		overflow-y: unset;
+		overflow-y: unset !important;
 	}
 	.maincont {
 	    margin-left: 20px !important;
@@ -1061,7 +1079,11 @@ html,body
 		margin-left: 50px;
 	}
 }
-@media screen and (min-width: 1200px){
+@media screen and (max-width: 1300px){
+
+		body{
+			overflow-y: unset !important;
+		}
 
     /* .navbar-nav {
     float: left;
@@ -1076,8 +1098,18 @@ html,body
 	} */
 }
 
-@media only screen and (min-width: 1366px){
+@media only screen and (min-width: 1400px){
 
+		.serviceafter
+		{
+			max-height: unset !important;
+
+		}
+		.postsparent
+		{
+			height: 80% !important;
+			max-height: unset !important;
+		}
     /* .navbar-nav {
     float: left;
     margin: 0;
