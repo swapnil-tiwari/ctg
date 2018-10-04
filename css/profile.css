@@ -13,11 +13,10 @@
   height:180px;
   margin:auto;
   background: #fff;
-  //border: 2px solid #000;
 }
 .profpart2
 {
-  margin-top: 40px;
+  margin-top: 60px;
   margin-left: unset !important;
   margin-right: unset !important;
 }
@@ -32,6 +31,7 @@
 }
 .infocont
 {
+  margin-bottom: 20px;
   padding:5px;
   background: #fff;
   box-shadow: 5px 10px 8px #888888;
@@ -59,10 +59,11 @@
   list-style: none;
   font-size: 13px;
   letter-spacing: 2px;
+  margin-top: 15px;
 }
 .profdetailslistItems
 {
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 5px;
 }
 .requests h1
@@ -75,6 +76,6 @@
   {
     margin-left: -30px !important;
     margin-right: -30px !important;
-    
+
   }
 }

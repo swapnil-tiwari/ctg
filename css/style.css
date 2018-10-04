@@ -921,7 +921,7 @@ html,body
 .services_suggestions
 {
 	padding: 10px;
-	box-shadow: 1px 1px 1px 1px #ddd;
+	box-shadow: 1px 1px 1px 1px #716d6d;
 }
 .services_suggestions h2
 {
@@ -1077,6 +1077,10 @@ html,body
 	.navbar-brand
 	{
 		margin-left: 50px;
+	}
+	.profiledata
+	{
+		min-height:70% !important;
 	}
 }
 @media screen and (max-width: 1300px){

@@ -14,6 +14,7 @@ async function func()
  typeof clientname!='undefined'?clientname.innerHTML=(await api.userdata(['username'])).data.username:null;
  typeof clientemail!='undefined'?clientemail.innerHTML=(await api.userdata(['email'])).data.email:null;
  typeof clientinfo!='undefined'?clientinfo.innerHTML=(await api.userdata(['description'])).data.description:null;
+  typeof clienttype!='undefined'?clienttype.innerHTML=(await api.userdata(['type'])).data.type:null;
 
 
 
