@@ -976,7 +976,7 @@ html,body
 .servicecol
 {
 	box-shadow: 1px 1px 1px 1px #ddd;
-	//margin:1px;
+	/* //margin:1px; */
     padding: 10px 5px;
 }
 .searvicecont:before,.searvicecont:after{
@@ -999,7 +999,35 @@ html,body
   width:100%;
   transition:800ms ease all;
 }
-
+/* Filters Section */
+.filters
+{
+	list-style: none;
+}
+.filters li
+{
+	display:inline-block;
+	margin-left: 2%;
+	padding-bottom:2px;
+}
+.filters li:hover
+{
+	  border-bottom: 2px solid #2874f0;
+		cursor: pointer;
+}
+.goback
+{
+	display: inline;
+	float:right;
+}
+.postsheader
+{
+	text-align: center;
+}
+.filtersecmobparent
+{
+	display: none;
+}
 /* After Grid*/
 .serviceafter{
 	display: none;
@@ -1081,6 +1109,17 @@ html,body
 	.profiledata
 	{
 		min-height:70% !important;
+	}
+	.filtercategory{
+		display: inline-block;
+	}
+	.filters
+	{
+		display: none;
+	}
+	.postsparent
+	{
+		clear:both;
 	}
 }
 @media screen and (max-width: 1300px){

@@ -45,7 +45,7 @@
     </style>
 
   </head>
-<body>
+<body class="animated fadeIn">
 	<nav class="navbar navbar-inverse header" >
   <div class="container-fluid">
     <div class="navbar-header">
@@ -212,7 +212,7 @@
 				</div>
 			</div>
       <!---   div after service click function   -->
-            <div class="serviceafter animated fadeIn" id="dev-target"  style="max-height:600px;"></div>
+            <div class="serviceafter animated fadeIn" id="dev-target"></div>
 
       <!--  End  div -->
 		</div>
@@ -276,8 +276,10 @@
           document.querySelector(id).parentNode.parentNode.parentNode.style.display="none";
           var node = document.querySelector("#"+val.id).childNodes[5];
           var html = node.innerHTML;
+					var filtersecmob='<div class="filtersecmobparent" style="float:right;margin-bottom:10px;"><span><strong>Sort By:</strong></span><select class="filtercategory"><option value="relevance">Relevance</option><option value="popularity">Popularity</option><option value="price-lowtohigh">Price -- Low to High</option><option value="price-hightolow">Price -- High to Low</option><option value="newest">Newest</option></select></div>'
+					var filtersec='<hr><ul class="filters"><strong>Sort By:</strong><li class="filteritem">Relevance</li><li class="filteritem">Popularity</li><li class="filteritem">Price -- Low to High</li><li class="filteritem">Price -- High to Low </li><li class="filteritem">Newest First</li></ul><hr style="border-color:#bfb9b9">'
           document.getElementById("dev-target").style.display="block";
-          document.getElementById("dev-target").innerHTML='<center><h2>'+ html +'</h2></center><div class="postsparent" style="overflow-y:scroll;max-height:465px;"> '+posts+posts+'</div><div id="contain"><center><button class="btn btn-primary goback" type="button" onclick="back(this)" id="return">Go Back</button>&nbsp;</center></div>';
+          document.getElementById("dev-target").innerHTML='<div class="postsheader"><h2 style="display:inline">'+ html +'</h2><button class="btn btn-primary goback" type="button" onclick="back(this)" id="return">Back</button>&nbsp;</div>'+filtersec+filtersecmob+'<div class="postsparent" style="overflow-y:scroll;max-height:425px;"> '+posts+posts+'</div><div id="contain"></div>';
 
 
           }
@@ -286,5 +288,15 @@
            document.querySelector('.midcontent').style.display="block";
           }
     </script>
+		<script>
+				$(document).ready(function(){
+					$(".serviceafter").ready(function(){
+						$(".filteritem").click(function(){
+	    				alert("The paragraph was clicked.")
+							$(this).css("display","none");
+						});
+					});
+				});
+		</script>
 
 </html
