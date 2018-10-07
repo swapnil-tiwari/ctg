@@ -864,6 +864,12 @@ html,body
 	height: auto;
 
 }
+.logos{
+float: left;
+height: auto;
+width: 40px;
+margin-right: 5px;
+}
 .header
 {
 	border:0px !important;
