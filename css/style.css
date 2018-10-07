@@ -3,7 +3,7 @@ html,body
 	height: 100%;
 	overflow-x: hidden;
 	font-family: calibri;
-	overflow-y: hidden;
+	/* overflow-y: hidden; */
 }
 .bg
 {
@@ -890,7 +890,7 @@ html,body
 }
 .maincont
 {
-	min-height: 100% !important;
+	height: calc(100% - 51px);
 	margin-right: 0px !important;
 	/* margin-left: 20px !important;
 	margin-right:20px !important; */
@@ -960,7 +960,7 @@ html,body
 {
 	padding: 20px;
 	border:1px solid #ddd;
-	height: 25%;
+	height: 26%;
 	padding-top: 30px;
 	box-sizing: border-box;
 	text-align: center;
@@ -978,6 +978,7 @@ html,body
 	box-shadow: 1px 1px 1px 1px #ddd;
 	/* //margin:1px; */
     padding: 10px 5px;
+		cursor:pointer;
 }
 .searvicecont:before,.searvicecont:after{
   content:'';
@@ -1033,6 +1034,7 @@ html,body
 	display: none;
 	padding: 20px;
     box-shadow: 1px 1px 1px 1px #ccc;
+		height: calc(100% - 10px) !important;
 }
 /*Dashboard Links*/
 .menu a:visited
@@ -1059,14 +1061,11 @@ html,body
 	box-shadow: 1px 1px 1px 1px #290d0d;
 	padding: 10px;
 	margin-top: 20px;
-	margin-bottom: 10px;
+	margin-bottom: 10%;
 }
 /*Responsive CSS*/
 @media screen and (max-width: 480px){
 
-	body{
-		overflow-y: unset !important;
-	}
 	.midcontent{
 
 		max-height: none;
@@ -1102,9 +1101,13 @@ html,body
 	{
 		display: none;
 	}
-	.navbar-brand
+	.navbar-header
 	{
-		margin-left: 50px;
+		display: grid;
+    height: 50px;
+    grid-template-columns: 17px 50px 1fr 59px;
+    width: calc(100% + 30px);
+    justify-items: center;
 	}
 	.profiledata
 	{
@@ -1119,16 +1122,17 @@ html,body
 	}
 	.postsparent
 	{
+
 		clear:both;
 	}
 }
-@media screen and (max-width: 1300px){
+/* @media screen and (max-width: 1300px){
 
 		body{
 			overflow-y: unset !important;
 		}
 
-    /* .navbar-nav {
+    .navbar-nav {
     float: left;
     margin: 0;
     width: 690px !important;
@@ -1138,8 +1142,8 @@ html,body
     float: left;
     width: 115px !important;
     text-align: center !important;
-	} */
-}
+	}
+} */
 
 @media only screen and (min-width: 1400px){
 
@@ -1148,11 +1152,11 @@ html,body
 			max-height: unset !important;
 
 		}
-		.postsparent
+		/* .postsparent
 		{
 			height: 80% !important;
 			max-height: unset !important;
-		}
+		} */
     /* .navbar-nav {
     float: left;
     margin: 0;
@@ -1163,4 +1167,48 @@ html,body
     width: 140px !important;
     text-align: center !important;
 	} */
+}
+@media only screen and (max-width: 768px){
+
+	#collapseconsole{
+		display: block;
+	}
+	#mainconsole
+	{
+		display: none;
+	}
+	#navlogout
+	{
+		display: none;
+	}
+	.profiledata
+	{
+		min-height:70% !important;
+	}
+	.filtercategory{
+		display: inline-block;
+	}
+	.filters
+	{
+		display: none;
+	}
+	.postsparent
+	{
+
+		clear:both;
+	}
+	.services_suggestions{
+
+		display: none;
+	}
+	.midcontent{
+
+		max-height: none;
+		overflow-y: unset !important;
+	}
+	.maincont {
+			margin-left: 20px !important;
+			margin-right: 20px !important;
+	}
+
 }
